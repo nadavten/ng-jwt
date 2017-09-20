@@ -1,0 +1,19 @@
+<form [formGroup]="form" class="center-block" (ngSubmit)="submit()">
+  
+  <div class="panel panel-primary">
+    
+    <div class="panel-heading">Register</div>
+    
+    <div class="inner-panel">
+
+      <input formControlName="firstName" type="text" class="form-control" placeholder="first name" />
+      <input formControlName="lastName" type="text" class="form-control" placeholder="last name" />
+      <input formControlName="email" type="text" class="form-control" placeholder="email"  />
+      <input formControlName="password" type="text" class="form-control" placeholder="password" />
+
+      <button type="submit" class="btn btn-primary center-block">Submit</button>
+      
+    </div>
+  </div>
+
+</form>

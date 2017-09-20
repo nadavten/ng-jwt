@@ -1,0 +1,26 @@
+<form [formGroup]="form" class="center-block" (ngSubmit)="submit()">
+    
+    <div class="panel panel-primary">
+      
+      <div class="panel-heading">Login</div>
+      
+      <div class="inner-panel">
+  
+        <div class="form-group">
+          <input formControlName="email" type="text" class="form-control" placeholder="email"  />
+          <input formControlName="password" type="text" class="form-control" placeholder="password" />
+        </div>
+  
+        <div class="form-group">
+          <button type="submit" [disabled]="form.invalid" class="btn btn-primary center-block">Submit</button>
+        </div>
+        
+        <div *ngIf="emailRequired || passwordRequired" class="alert alert-danger">
+          <div *ngIf="emailRequired">Email is required</div>
+          <div *ngIf="passwordRequired">Password is required</div>
+        </div>
+
+      </div>
+    </div>
+  
+  </form>
